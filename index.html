@@ -46,6 +46,7 @@
     .hero-img{width:100px; height:100px;}
   }
   h2.label{font-size:.75rem; font-weight:500; letter-spacing:.02em; margin:0 0 16px; color:color-mix(in srgb, var(--ink) 65%, transparent);}
+  .about-text{max-width:60ch; font-size:.85rem; line-height:1.7; opacity:.9; margin:0 0 40px;}
   .exp-row{display:flex; justify-content:space-between; gap:12px; padding:8px 0; font-size:.8rem;}
   .exp-role{font-weight:400; opacity:.85;}
   .exp-org{font-family:'Inter',sans-serif; font-weight:500;}
@@ -75,47 +76,21 @@
 <body>
 
 <header>
- <nav class="wrap">
-  <a class="word" href="#top">Lynn</a>
-
-  <div class="links">
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav> 
+  <nav class="wrap">
+    <a class="word" href="#">Lynn</a>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 </header>
 
-  <section id="about">
-
-  <h2 class="label">About</h2>
-
-  <div class="about-grid">
-
-    <div class="about-text">
-      <p>
-        Lynn is a graphic communication designer, graduated from BA Graphic
-        Communication Design at Central Saint Martins. She enquires into
-        methodologies of shaping experience and environment by arranging
-        form and content to explore the role of the designer — with
-        practices centred on community, and most of all, people.
-      </p>
-    </div>
-
-    <div>
-      <h2 class="label">Experience</h2>
-
-      <!-- Experience goes here -->
-
-    </div>
-
-  </div>
-
-</section>
-  
-
 <main id="top">
-  <div class="wrap">
+  <div id="page-home" class="wrap">
 
+    <section class="hero" aria-label="Introduction">
+      <img class="hero-img" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><rect width='180' height='180' fill='%23D9D4C7'/></svg>" alt="Lynn — replace with your own portrait or work image">
+    </section>
 
 
     <section id="work">
@@ -254,7 +229,40 @@
     </footer>
 
   </div>
+
+  <div id="page-about" class="wrap" hidden>
+    <section aria-label="About">
+      <h2 class="label">About</h2>
+      <p class="about-text">Lynn is a graphic communication designer, graduated from BA Graphic Communication Design at Central Saint Martins. She enquires into methodologies of shaping experience and environment by arranging form and content to explore the role of the designer — with practices centred on community, and most of all, people.</p>
+
+      <h2 class="label">Experience</h2>
+      <div class="exp-row">
+        <div><span class="exp-org">University of the Arts London</span><br><span class="exp-role">Junior Graphic Designer</span></div>
+        <div class="exp-meta">London, UK<br>2023 – Present</div>
+      </div>
+      <div class="exp-row">
+        <div><span class="exp-org">NMW Studio</span><br><span class="exp-role">Freelance Graphic Designer</span></div>
+        <div class="exp-meta">Seoul, Korea<br>2020 – 2023</div>
+      </div>
+    </section>
+  </div>
 </main>
+
+<script>
+  function route(){
+    var hash = location.hash;
+    var isAbout = hash.indexOf('#about') === 0;
+    document.getElementById('page-home').hidden = isAbout;
+    document.getElementById('page-about').hidden = !isAbout;
+    if(!isAbout && hash && hash !== '#'){
+      var el = document.getElementById(hash.slice(1));
+      if(el){ el.scrollIntoView(); return; }
+    }
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange', route);
+  window.addEventListener('DOMContentLoaded', route);
+</script>
 
 </body>
 </html>
