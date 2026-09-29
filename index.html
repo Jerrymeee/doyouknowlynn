@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lynn — Graphic Communication Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#161512; --paper:#FFFFFF; --mustard:#E3B23C; --line:#161512;
+    box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){ --ink:#F2EFE8; --paper:#161512; --line:#F2EFE8; }
+  }
+  :root[data-theme="dark"]{ --ink:#F2EFE8; --paper:#161512; --line:#F2EFE8; }
+  *{box-sizing:border-box;}
+  html{scroll-padding-top:env(safe-area-inset-top,0px); scroll-behavior:smooth;}
+  html,body{height:100%;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:'Inter',sans-serif; font-size:15px; line-height:1.5;
+  }
+  h1,h2,h3,.disp{font-family:'Inter',sans-serif;}
+  a{color:inherit;}
+  .wrap{max-width:1100px; margin:0 auto; padding:0 32px;}
+  header{
+    position:sticky; top:0; top:env(safe-area-inset-top,0px); background:var(--paper);
+    z-index:10;
+  }
+  nav.wrap{display:flex; justify-content:space-between; align-items:center; padding:14px 32px; flex-wrap:wrap; gap:10px;}
+  .word{font-family:'Inter',sans-serif; font-weight:500; font-size:.85rem; text-decoration:none;}
+  .links a{font-size:.78rem; text-decoration:none; margin-left:18px; border-bottom:1px solid transparent;}
+  .links a:hover, .links a:focus-visible{border-bottom-color:var(--ink);}
+  section{padding:44px 0;}
+  section:last-of-type{border-bottom:none;}
+  .hero{display:flex; gap:32px; align-items:flex-start; flex-wrap:wrap;}
+  .hero-img{width:140px; height:140px; flex:none; object-fit:cover; background:var(--mustard);}
+  .hero-text{flex:1; min-width:200px; max-width:340px;}
+  .hero-experience{flex:1; min-width:220px;}
+  .hero h1{font-family:'Inter',sans-serif; font-size:.75rem; font-weight:500; line-height:1.6; margin:0 0 10px;}
+  .hero p{font-size:.75rem; line-height:1.6; max-width:40ch; margin:0; opacity:.85;}
+  @media (max-width:520px){
+    .hero-img{width:100px; height:100px;}
+  }
+  h2.label{font-size:.75rem; font-weight:500; letter-spacing:.02em; margin:0 0 16px; color:color-mix(in srgb, var(--ink) 65%, transparent);}
+  .exp-row{display:flex; justify-content:space-between; gap:12px; padding:8px 0; font-size:.8rem;}
+  .exp-role{font-weight:400; opacity:.85;}
+  .exp-org{font-family:'Inter',sans-serif; font-weight:500;}
+  .exp-meta{text-align:right; font-size:.72rem; opacity:.6; white-space:nowrap;}
+  #work{display:grid; grid-template-columns:1fr 1fr; column-gap:32px; row-gap:36px;}
+  #work h2.label{grid-column:1 / -1;}
+  .work-item{display:flex; flex-direction:column; gap:14px; align-items:stretch; padding:0; border:none; max-width:none;}
+  .work-thumb{width:100%; height:auto; aspect-ratio:4/3; flex:none; object-fit:cover; background:var(--mustard); display:block;}
+  .work-text{min-width:0; flex:1;}
+  .work-item a.title{font-family:'Inter',sans-serif; font-weight:500; font-size:1.1rem; text-decoration:none; display:block; margin-bottom:6px; letter-spacing:-.01em;}
+  .work-item a.title:hover, .work-item a.title:focus-visible{text-decoration:underline;}
+  .work-desc{font-size:.8rem; line-height:1.55; max-width:48ch; opacity:.85;}
+  @media (max-width:640px){
+    #work{grid-template-columns:1fr;}
+  }
+  footer{padding:32px 0 48px;}
+  footer p{font-size:.8rem; opacity:.85;}
+  footer .links{display:flex; flex-wrap:wrap; gap:10px 22px; margin-top:14px;}
+  footer a{font-family:'Inter',sans-serif; font-weight:500; font-size:.8rem; text-decoration:none;}
+  footer a:hover{text-decoration:underline;}
+  @media (max-width:520px){
+    .exp-row{flex-direction:column; gap:2px;}
+    .exp-meta{text-align:left;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a class="word" href="#top">Lynn</a>
+    <div class="links">
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+  <div class="wrap">
+
+    <section class="hero" aria-label="Introduction">
+      <img class="hero-img" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><rect width='180' height='180' fill='%23D9D4C7'/></svg>" alt="Lynn — replace with your own portrait or work image">
+      <div class="hero-text">
+        <p>Lynn is a graphic communication designer, graduated from BA Graphic Communication Design at Central Saint Martins. She enquires into methodologies of shaping experience and environment by arranging form and content to explore the role of the designer — with practices centred on community, and most of all, people.</p>
+      </div>
+      <div class="hero-experience" id="experience">
+        <h2 class="label">Experience</h2>
+        <div class="exp-row">
+          <div><span class="exp-org">University of the Arts London</span><br><span class="exp-role">Junior Graphic Designer</span></div>
+          <div class="exp-meta">London, UK<br>2023 – Present</div>
+        </div>
+        <div class="exp-row">
+          <div><span class="exp-org">NMW Studio</span><br><span class="exp-role">Freelance Graphic Designer</span></div>
+          <div class="exp-meta">Seoul, Korea<br>2020 – 2023</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <h2 class="label">Selected work</h2>
+
+      <article class="work-item">
+        <img class="work-thumb" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='96' height='96'><rect width='96' height='96' fill='%23D9D4C7'/></svg>" alt="Open House Festival: 40 Lime Grove — replace with your own image">
+        <div class="work-text">
+          <a class="title" href="#">Open House Festival: 40 Lime Grove</a>
+          <p class="work-desc">(Identity &amp; signage) Festival identity and signage design as part of Open House Festival London at 40 Lime Grove.</p>
+        </div>
+      </article>
+
+      <article class="work-item">
+        <img class="work-thumb" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='96' height='96'><rect width='96' height='96' fill='%23D9D4C7'/></svg>" alt="Waste bin signage — replace with your own image">
+        <div class="work-text">
+          <a class="title" href="#">Waste bin signage</a>
+          <p class="work-desc">(University of the Arts London) Signage system for waste bins across UAL's college buildings.</p>
+        </div>
+      </article>
+
+      <article class="work-item">
+        <img class="work-thumb" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='96' height='96'><rect width='96' height='96' fill='%23D9D4C7'/></svg>" alt="The being of being 던져진 시선 — replace with your own image">
+        <div class="work-text">
+          <a class="title" href="#">The being of being 던져진 시선</a>
+          <p class="work-desc">(Exhibition identity) Identity design for the exhibition 'The being of being 던져진 시선'.</p>
+        </div>
+      </article>
+
+      <article class="work-item">
+        <img class="work-thumb" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='96' height='96'><rect width='96' height='96' fill='%23D9D4C7'/></svg>" alt="Disability History Month campaign, 2025 — replace with your own image">
+        <div class="work-text">
+          <a class="title" href="#">Disability History Month campaign, 2025</a>
+          <p class="work-desc">(University of the Arts London) UAL's first Disability History Month campaign, celebrating and raising awareness of the disabled community to help students and staff feel included, valued, and recognised.</p>
+        </div>
+      </article>
+
+      <article class="work-item">
+        <img class="work-thumb" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='96' height='96'><rect width='96' height='96' fill='%23D9D4C7'/></svg>" alt="Welcome campaign 24/25 — replace with your own image">
+        <div class="work-text">
+          <a class="title" href="#">Welcome campaign 24/25</a>
+          <p class="work-desc">(University of the Arts London) A yearly campaign greeting new and returning students across all six colleges, spanning Undergraduate, Postgraduate, and Pre-degree audiences.</p>
+        </div>
+      </article>
+
+      <article class="work-item">
+        <img class="work-thumb" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='96' height='96'><rect width='96' height='96' fill='%23D9D4C7'/></svg>" alt="UAL: Projects, 2023 – Present — replace with your own image">
+        <div class="work-text">
+          <a class="title" href="#">UAL: Projects, 2023 – Present</a>
+          <p class="work-desc">(University of the Arts London) Ongoing digital and print assets built with the in-house team, aligned to multi-channel campaign strategy.</p>
+        </div>
+      </article>
+
+      <article class="work-item">
+        <img class="work-thumb" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='96' height='96'><rect width='96' height='96' fill='%23D9D4C7'/></svg>" alt="A Series of Way-Confusing Maps — replace with your own image">
+        <div class="work-text">
+          <a class="title" href="#">A Series of Way-Confusing Maps</a>
+          <p class="work-desc">(Publication · VK23 Conference, Aalto University · Offprint London, Tate Modern) A publication exploring identity and belonging through psychogeography, visualising a dataset of personal experiences about what and where home is.</p>
+        </div>
+      </article>
+
+      <article class="work-item">
+        <img class="work-thumb" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='96' height='96'><rect width='96' height='96' fill='%23D9D4C7'/></svg>" alt="NMW Studio: Projects, 2020 – 2023 — replace with your own image">
+        <div class="work-text">
+          <a class="title" href="#">NMW Studio: Projects, 2020 – 2023</a>
+          <p class="work-desc">(NMW Studio) Visual campaigns and content for fashion brands including THEHANDSOME.COM, S.I. KOREA, and LOTTE DUTY FREE ONLINE.</p>
+        </div>
+      </article>
+
+      <article class="work-item">
+        <img class="work-thumb" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='96' height='96'><rect width='96' height='96' fill='%23D9D4C7'/></svg>" alt="Positioning through shaping the intersections of design — replace with your own image">
+        <div class="work-text">
+          <a class="title" href="#">Positioning through shaping the intersections of design</a>
+          <p class="work-desc">(Publication series · CSM Gradshow 2023) A series introducing positions a designer can take — from producer and cartographer to collaborator, curator, and contributor.</p>
+        </div>
+      </article>
+
+      <article class="work-item">
+        <img class="work-thumb" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='96' height='96'><rect width='96' height='96' fill='%23D9D4C7'/></svg>" alt="VISA: Visual Image Stay Admission — replace with your own image">
+        <div class="work-text">
+          <a class="title" href="#">VISA: Visual Image Stay Admission</a>
+          <p class="work-desc">(Installation · CSM Gradshow 2023) A participatory installation exploring the human desire to classify — a visa system of images inviting the audience to construct new narratives.</p>
+        </div>
+      </article>
+
+      <article class="work-item">
+        <img class="work-thumb" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='96' height='96'><rect width='96' height='96' fill='%23D9D4C7'/></svg>" alt="The Peddle Bar — replace with your own image">
+        <div class="work-text">
+          <a class="title" href="#">The Peddle Bar</a>
+          <p class="work-desc">(Computational design) A modified heddle bar with added inputs, letting participants teach themselves weaving through parametric, rule-based pattern generation.</p>
+        </div>
+      </article>
+
+      <article class="work-item">
+        <img class="work-thumb" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='96' height='96'><rect width='96' height='96' fill='%23D9D4C7'/></svg>" alt="N1C 4AA — replace with your own image">
+        <div class="work-text">
+          <a class="title" href="#">N1C 4AA</a>
+          <p class="work-desc">(Packaging · with Dohee) Craft beer can packaging for the CSM x Two Tribe Brewery brief, capturing the character of Central Saint Martins.</p>
+        </div>
+      </article>
+
+      <article class="work-item">
+        <img class="work-thumb" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='96' height='96'><rect width='96' height='96' fill='%23D9D4C7'/></svg>" alt="Mapping Our Stories — replace with your own image">
+        <div class="work-text">
+          <a class="title" href="#">Mapping Our Stories</a>
+          <p class="work-desc">(Collaborative workshop · with Clara Uslu) A workshop exploring the narrative of art institutions through playful activities that blur participant and creator.</p>
+        </div>
+      </article>
+
+      <article class="work-item">
+        <img class="work-thumb" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='96' height='96'><rect width='96' height='96' fill='%23D9D4C7'/></svg>" alt="Earth Oddity — replace with your own image">
+        <div class="work-text">
+          <a class="title" href="#">Earth Oddity</a>
+          <p class="work-desc">(Exhibition) An unconventional climate forecast featuring lichen as protagonist, aiming to inspire an ecological mindset.</p>
+        </div>
+      </article>
+
+      <article class="work-item">
+        <img class="work-thumb" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='96' height='96'><rect width='96' height='96' fill='%23D9D4C7'/></svg>" alt="Love and Peace — replace with your own image">
+        <div class="work-text">
+          <a class="title" href="#">Love and Peace</a>
+          <p class="work-desc">(Animation) A short animation following a grandmother's search for love and peace towards her grandchildren.</p>
+        </div>
+      </article>
+
+    </section>
+
+    <footer id="contact">
+      <h2 class="label">Contact</h2>
+      <p class="work-desc">CV available on request. Full portfolio provided upon request.</p>
+      <div class="links">
+        <a href="mailto:cofls424@gmail.com">Email</a>
+        <a href="https://www.instagram.com/lynnthesheep/">Instagram</a>
+        <a href="https://www.linkedin.com/in/lynn-chaelin-yang-97209a212/">LinkedIn</a>
+      </div>
+    </footer>
+
+  </div>
+</main>
+
+</body>
+</html>
